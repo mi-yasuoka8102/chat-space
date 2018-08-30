@@ -1,3 +1,10 @@
+## usersテーブル
+
+|Column|Type   |Options    |
+|------|----   |    -------|
+|name  |integer|null: false|
+|e-mail|integer|null: false|
+
 ## membersテーブル
 
 |Column|Type|Options|
