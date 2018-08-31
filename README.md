@@ -34,8 +34,8 @@
 
 |Column   |Type          |Options                                     |
 |---------|--------------|--------------------------------------------|
-|text     |VARCHAR(1000) |null: false                                 |
-|image    |VARCHAR(500)  |null: false                                 |
+|text     |VARCHAR(1000) |                                            |
+|image    |VARCHAR(500)  |                                            |
 |user_id  |INT           |null: false, foreign_key: true              |
 |group_id |INT           |null: false, foreign_key: true              |
 
