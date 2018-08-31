@@ -6,7 +6,7 @@
 |e-mail|VARCHAR(256) |null: false, unique: true             |
 
 ### Association
-- has_many :groups, through: :intermediate_table_of_user_and_groups
+- has_many :groups, through: :user_groups
 - has_many :messages
 
 ## groupsテーブル
@@ -16,7 +16,7 @@
 |name  |VARCHAR(100) |null: false|
 
 ### Association
-- has_many :users, through: :intermediate_table_of_user_and_group
+- has_many :users, through: :user_groups
 - has_many :messages
 
 ## user_groupsテーブル(中間テーブル)
