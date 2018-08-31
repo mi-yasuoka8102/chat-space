@@ -14,7 +14,6 @@
 |Column|Type         |Options    |
 |------|-------------|-----------|
 |name  |VARCHAR(100) |null: false|
-|name  |VARCHAR(100) |null: false|
 
 ### Association
 - has_many :intermediate_table_of_user_and_group
