@@ -1,9 +1,9 @@
 ## usersテーブル
 
-|Column|Type         |Options                  |
-|------|-------------|-------------------------|
-|name  |VARCHAR(100) |null: false, unique: true|
-|e-mail|VARCHAR(256) |null: false, unique: true|
+|Column|Type         |Options                               |
+|------|-------------|--------------------------------------|
+|name  |VARCHAR(100) |null: false, unique: true, index: true|
+|e-mail|VARCHAR(256) |null: false, unique: true             |
 
 ### Association
 - has_many :groups, through: :intermediate_table_of_user_and_groups
