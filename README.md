@@ -23,8 +23,8 @@
 
 |Column   |Type         |Options                       |
 |---------|-------------|------------------------------|
-|user_id  |INT          |null: false, foreign_key: true|
-|group_id |INT          |null: false, foreign_key: true|
+|user_id  |references   |null: false, foreign_key: true|
+|group_id |references   |null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -36,8 +36,8 @@
 |---------|--------------|--------------------------------------------|
 |text     |VARCHAR(1000) |                                            |
 |image    |VARCHAR(500)  |                                            |
-|user_id  |INT           |null: false, foreign_key: true              |
-|group_id |INT           |null: false, foreign_key: true              |
+|user_id  |references    |null: false, foreign_key: true              |
+|group_id |references    |null: false, foreign_key: true              |
 
 ### Association
 - belongs_to :user
