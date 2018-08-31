@@ -15,3 +15,7 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+#ここから追加
+#画像がGithubにコミットされないようにする
+public/uploads/*
