@@ -19,7 +19,7 @@
 - has_many :users, through: :intermediate_table_of_user_and_group
 - has_many :messages
 
-## intermediate_table_of_user_and_groupテーブル(中間テーブル)
+## user_groupsテーブル(中間テーブル)
 
 |Column   |Type         |Options                       |
 |---------|-------------|------------------------------|
