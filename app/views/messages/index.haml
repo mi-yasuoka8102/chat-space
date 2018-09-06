@@ -1,2 +1,14 @@
-!!!
-hello World
+.chat-side
+  .chat-side__user
+    .chat-side__user-content
+      .chat-side__user-name テストさん
+      %a.chat-side__user--new-group{:href => "/groups/new"}
+        %i.fa.fa-pencil-square-o
+      %a.chat-side__user--edit-user{:href => "/users/edit"}
+        %i.fa.fa-cog
+
+  .chat-side__groups
+.chat-main
+  .chat-main__header
+  .chat-main__body
+  .chat-main__footer
