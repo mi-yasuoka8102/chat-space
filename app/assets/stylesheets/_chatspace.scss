@@ -48,6 +48,24 @@
     height: 85%;
     width: 100%;
     background-color: #2f3e51;
+
+    .chat-side__groups-list {
+      height: 100%;
+      color: #fff;
+
+      .chat-side__group {
+        padding: 20px;
+
+        .chat-side__group-name {
+          font-size: 15px;
+        }
+
+        .chat-side__group-message {
+          font-size: 11px;
+          padding: 5px 0 0 0;
+        }
+      }
+    }
   }
 }
 
