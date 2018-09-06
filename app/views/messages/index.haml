@@ -1,7 +1,8 @@
 .chat-side
   .chat-side__user
     .chat-side__user-content
-      .chat-side__user-name テストさん
+      .chat-side__user-name
+        テストさん
       %a.chat-side__user--new-group{:href => "/groups/new"}
         %i.fa.fa-pencil-square-o
       %a.chat-side__user--edit-user{:href => "/users/edit"}
@@ -10,13 +11,34 @@
   .chat-side__groups
     .chat-side__groups-list
       .chat-side__group
-        .chat-side__group-name テストグループ
-        .chat-side__group-message テストです
+        .chat-side__group-name
+          テストグループ
+        .chat-side__group-message
+          テストです
       .chat-side__group
-        .chat-side__group-name テストなんですよ
-        .chat-side__group-message なーんも読み込んでないです
+        .chat-side__group-name
+          テストなんですよ
+        .chat-side__group-message
+          なーんも読み込んでないです
 
 .chat-main
   .chat-main__header
+    .chat-main__header--group.clearfix
+      .chat-main__header--group-name
+        テストグループ
+      %a.chat-main__header--group-edit-btn
+        Edit
+    .chat-main__header-members
+      MEMBER:
+      %i
+        テストさん  大宇宙
+
+
   .chat-main__body
   .chat-main__footer
+
+
+
+
+
+
