@@ -44,7 +44,7 @@
     }
   }
 
-  .chat-side__groups {//左下のデザイン
+  .chat-side__groups {//左真ん中から下のデザイン
     height: 85%;
     width: 100%;
     background-color: #2f3e51;
@@ -138,10 +138,6 @@
         .chat-main__message-body {
           color: #434A54;
           clear: both;
-
-          .chat-main__message-body-image {
-
-          }
         }
       }
     }
@@ -151,5 +147,54 @@
     height: 90px;
     width: 100%;
     background-color: #B8C3C7;
+
+    .chat-main__footer-form {
+      margin: 0 40px;
+      position: relative;
+
+      .chat-main__footer-body {
+        position: relative;
+
+        .message {
+          height: 20px;
+          width: calc( 100% - 150px );
+          padding: 15px 10px;
+          margin: 20px 0;
+          border: none;
+        }
+
+        .chat-file {
+          height: 50px;
+          width: 40px;
+          margin: 32px 130px 20px 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          .image {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: none;
+          }
+        }
+
+        .submit {
+          color: #fff;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          background-color: #38AEF0;
+          margin: 20px 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border: none;
+        }
+      }
+    }
   }
 }
+
+
+

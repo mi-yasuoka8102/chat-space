@@ -3,9 +3,9 @@
     .chat-side__user-content
       .chat-side__user-name
         テストさん
-      %a.chat-side__user--new-group{:href => "/groups/new"}
+      %a.chat-side__user--new-group
         %i.fa.fa-pencil-square-o
-      %a.chat-side__user--edit-user{:href => "/users/edit"}
+      %a.chat-side__user--edit-user
         %i.fa.fa-cog
 
   .chat-side__groups
@@ -60,11 +60,12 @@
           ここの子要素にimgがあります
           .chat-main__message-body-image
 
-
   .chat-main__footer
-
-
-
-
-
+    %form#new_massage.chat-main__footer-form
+      .chat-main__footer-body
+        %input#message_body.message{name: "message[body]", placeholder: "type a message", type: "text"}
+        %label.chat-file{for: "message_image"}
+          %input#message_image.image{name: "message[image]", type: "file"}
+            %i.fa.fa-image
+        %input.submit{"data-disable-with" => "Send", name: "commit", type: "submit", value: "Send"}
 
