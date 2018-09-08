@@ -5,20 +5,20 @@
   float: left;
   background-color: red;//確認用
 
-  .chat-side__user {//左上のデザイン
+  &__user {//左上のデザイン
     height: 15%;
     width: 100%;
     background-color: #253141;
     position: relative;
 
-      .chat-side__user-content {
-      height: 50px;
-      width: 100%;
-      line-height: 50px;
-      margin: auto 0;
-      position: absolute;
-      top: 0;
-      bottom: 0;
+      &-content {
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        margin: auto 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
 
       .chat-side__user-name {
         color: #fff;
@@ -44,23 +44,23 @@
     }
   }
 
-  .chat-side__groups {//左真ん中から下のデザイン
+  &__groups {//左真ん中から下のデザイン
     height: 85%;
     width: 100%;
     background-color: #2f3e51;
 
-    .chat-side__groups-list {
+    &-list {
       height: 100%;
       color: #fff;
 
       .chat-side__group {
         padding: 20px;
 
-        .chat-side__group-name {
+        &-name {
           font-size: 15px;
         }
 
-        .chat-side__group-message {
+        &-message {
           font-size: 11px;
           padding: 5px 0 0 0;
         }
@@ -75,21 +75,21 @@
   float: left;
   background-color: #FFFFFF;
 
-  .chat-main__header {//右上のデザイン
+  &__header {//右上のデザイン
     height: 15%;
     border: 1px solid #eee;
 
-    .chat-main__header--group {
+    &--group {
       margin: 0 40px;
 
-      .chat-main__header--group-name {
+      &-name {
         color: #333;
         font-size: 20px;
         margin: 35px 0 15px;
         float: left;
       }
 
-      .chat-main__header--group-edit-btn {
+      &-edit-btn {
         color: #38AEF0;
         font-size: 15px;
         padding: 12.5px 20px;
@@ -103,39 +103,39 @@
       }
     }
 
-    .chat-main__header-members {
+    &-members {
       color: #999;
       font-size: 12px;
       margin: 0 40px;
     }
   }
 
-  .chat-main__body {//右真ん中のデザイン
+  &__body {//右真ん中のデザイン
     height: calc( 100vh - 15% - 90px );
     overflow-y: scroll;
 
-    .chat-main__body--messages-list {
+    &--messages-list {
       padding-top: 26px;
       padding-left: 40px;
 
       .chat-main__message {
         padding: 20px 0;
 
-        .chat-main__message-name {
+        &-name {
           color: #434A54;
           font-size: 16px;
           font-weight: bold;
           float: left;
         }
 
-        .chat-main__message-time {
+        &-time {
           color: #999999;
           font-size: 12px;
           padding: 0 10px 10px;
           float: left;
         }
 
-        .chat-main__message-body {
+        &-body {
           color: #434A54;
           clear: both;
         }
@@ -143,12 +143,12 @@
     }
   }
 
-  .chat-main__footer {//右下のデザイン
+  &__footer {//右下のデザイン
     height: 90px;
     width: 100%;
     background-color: #B8C3C7;
 
-    .chat-main__footer-form {
+    &-form {
       margin: 0 40px;
       position: relative;
 
