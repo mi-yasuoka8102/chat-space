@@ -1,0 +1,42 @@
+.chat-side
+  .chat-side__user
+    .chat-side__user-content
+      .chat-side__user-name
+        テストさん
+      %a.chat-side__user--new-group
+        %i.fa.fa-pencil-square-o
+      %a.chat-side__user--edit-user
+        %i.fa.fa-cog
+
+  .chat-side__groups
+    .chat-side__groups-list
+      = render partial: "chat-side__group"
+      = render partial: "chat-side__group"
+
+.chat-main
+  .chat-main__header
+    .chat-main__header--group.clearfix
+      .chat-main__header--group-name
+        テストグループ
+      %a.chat-main__header--group-edit-btn
+        Edit
+    .chat-main__header-members
+      MEMBER:
+      %i
+        テストさん  大宇宙
+
+  .chat-main__body
+    .chat-main__body--messages-list
+      = render partial: "chat-main__message"
+      = render partial: "chat-main__message"
+      = render partial: "chat-main__message"
+
+  .chat-main__footer
+    %form#new_massage.chat-main__footer-form
+      .chat-main__footer-body
+        %input#message_body.message{placeholder: "type a message", type: "text"}
+        %label.chat-file
+          %input#message_image.image
+            %i.fa.fa-image
+        %input.submit{type: "submit", value: "Send"}
+
