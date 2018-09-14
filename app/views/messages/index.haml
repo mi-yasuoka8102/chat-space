@@ -1,5 +1,5 @@
 / 仮の表示ファイル
-  = render 'shared/side_bar'
+= render 'shared/side_bar'
 
 .chat-main
   .chat-main__header
@@ -19,12 +19,21 @@
       = render partial: "chat-main__message"
       = render partial: "chat-main__message"
 
+  / .chat-main__footer
+  /   %form#new_massage.chat-main__footer-form
+  /     .chat-main__footer-body
+  /       %input#message_body.message{placeholder: "type a message", type: "text"}
+  /       %label.chat-file
+  /         %input#message_image.image
+  /           %i.fa.fa-image
+  /       %input.submit{type: "submit", value: "Send"}
+
   .chat-main__footer
-    %form#new_massage.chat-main__footer-form
+    = form_for [@group, @message], html: {class: "chat-main__footer-form"} do |f|
       .chat-main__footer-body
-        %input#message_body.message{placeholder: "type a message", type: "text"}
-        %label.chat-file
-          %input#message_image.image
-            %i.fa.fa-image
-        %input.submit{type: "submit", value: "Send"}
+        = f.text_field :content, class: 'message', id:'message_body', placeholder: 'type a message'
+        = f.label :image, class: 'chat-file' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'image'
+        = f.submit 'Send', class: 'submit'
 
