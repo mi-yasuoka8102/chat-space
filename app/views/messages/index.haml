@@ -1,4 +1,3 @@
-/ 仮の表示ファイル
 = render 'shared/side_bar'
 
 .chat-main
@@ -11,19 +10,11 @@
     .chat-main__header-members
       MEMBER:
       %i
-        テストさん  大宇宙
+        - @memders.each do |memder|
+          =memder.name
 
   .chat-main__body
     = render partial: 'chat-main__message', collection: @messages, as: "message"
-
-  / .chat-main__footer
-  /   %form#new_massage.chat-main__footer-form
-  /     .chat-main__footer-body
-  /       %input#message_body.message{placeholder: "type a message", type: "text"}
-  /       %label.chat-file
-  /         %input#message_image.image
-  /           %i.fa.fa-image
-  /       %input.submit{type: "submit", value: "Send"}
 
   .chat-main__footer
     = form_for [@group, @message], html: {class: "chat-main__footer-form"} do |f|
