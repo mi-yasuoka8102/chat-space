@@ -14,10 +14,7 @@
         テストさん  大宇宙
 
   .chat-main__body
-    .chat-main__body--messages-list
-      = render partial: "chat-main__message"
-      = render partial: "chat-main__message"
-      = render partial: "chat-main__message"
+    = render partial: 'chat-main__message', collection: @messages, as: "message"
 
   / .chat-main__footer
   /   %form#new_massage.chat-main__footer-form
