@@ -29,8 +29,8 @@ $(function(){
 
   $('#new_comment').on('submit', function(e){
     e.preventDefault();
-    console.log(this)
-    console.log(" fire!!!")
+    console.log(this)//確認用
+    console.log(" fire!!!")//確認用
     var formData = new FormData(this);
     var url = $(this).attr('action')
     $.ajax({//messagesコントローラのcreateを呼び出している
@@ -45,6 +45,7 @@ $(function(){
       var html = buildHTML(data);
       $('.chat-main__body').append(html)
       $('.message').val('')
+      $('.image').val(null)
       $('.submit').prop( 'disabled', false ); // sendボタンのdisableを外す、連続して投稿できるようになる
       $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');//メッセージが投稿された時自動的に一番下までスクロールする
     })
