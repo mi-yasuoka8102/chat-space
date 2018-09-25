@@ -17,7 +17,7 @@
     = render partial: 'chat-main__message', collection: @messages, as: "message"
 
   .chat-main__footer
-    = form_for [@group, @message], html: {class: "chat-main__footer-form"} do |f|
+    = form_for [@group, @message], html: {class: "chat-main__footer-form", id: "new_comment"} do |f|
       .chat-main__footer-body
         = f.text_field :content, class: 'message', id:'message_body', placeholder: 'type a message'
         = f.label :image, class: 'chat-file' do
