@@ -29,8 +29,6 @@ $(function(){
 
   $('#new_comment').on('submit', function(e){
     e.preventDefault();
-    console.log(this)//確認用
-    console.log(" fire!!!")//確認用
     var formData = new FormData(this);
     var url = $(this).attr('action')
     $.ajax({//messagesコントローラのcreateを呼び出している
