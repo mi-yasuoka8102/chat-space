@@ -1,21 +1,21 @@
 $(function(){
 
-  function buildHTML(comment){
+  function buildHTML(message){
     var html = `<div class='chat-main__body--messages-list'>
                   <div class='chat-main__message'>
                     <div class='chat-main__message-name'>
-                      ${comment.name}
+                      ${message.name}
                     </div>
                     <div class='chat-main__message-time'>
-                      ${comment.created_at}
+                      ${message.created_at}
                     </div>
                     <div class='chat-main__message-body'></div>
                     <p class='chat-main__message-body-image'>
-                      ${comment.content}
+                      ${message.content}
                     </p>`
 
-    if (comment.image != null) {//画像が投稿された場合の処理
-      var image = `<img class="lower-message__image" src="${comment.image}">
+    if (message.image != null) {//画像が投稿された場合の処理
+      var image = `<img class="lower-message__image" src="${message.image}">
                   </div>
                 </div>`
       return html + image;
@@ -27,7 +27,7 @@ $(function(){
     }
   }
 
-  $('#new_comment').on('submit', function(e){
+  $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
