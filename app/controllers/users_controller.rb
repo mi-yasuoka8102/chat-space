@@ -1,5 +1,14 @@
 class UsersController < ApplicationController
 
+  def index
+    # Userテーブルのnameカラムの値と#user-search-fieldに入力された値が部分一致するレコードを取り出している
+    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   def edit
   end
 
