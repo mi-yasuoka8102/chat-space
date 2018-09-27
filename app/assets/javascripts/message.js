@@ -2,7 +2,7 @@ $(function(){
 
   function buildHTML(message){
     var html = `<div class='chat-main__body--messages-list'>
-                  <div class='chat-main__message'>
+                  <div class='chat-main__message' data-message-id='${message.id}'>
                     <div class='chat-main__message-name'>
                       ${message.name}
                     </div>

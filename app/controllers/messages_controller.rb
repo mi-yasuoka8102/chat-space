@@ -5,6 +5,10 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
     @memders = @group.users
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create
