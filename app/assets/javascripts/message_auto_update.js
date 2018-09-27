@@ -44,6 +44,6 @@ $(function() {
     });
   };
   if( window.location.href.match("./messages")){//チャット画面でのみ更新機能を動かす
-    setInterval(interval, 1500);
+    setInterval(interval, 5000);
   }
 });
