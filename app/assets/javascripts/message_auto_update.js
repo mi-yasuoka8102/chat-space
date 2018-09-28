@@ -1,10 +1,8 @@
 $(function() {
 
   function buildHTML(message) {
-  var insertImage = "";
-  if (message.image) {
-    insertImage = `<img class="lower-message__image" src="${message.image}">`
-  }
+
+  var insertImage = message.image ? `<img class="lower-message__image" src="${message.image}">` : "";
   var html =  `<div class='chat-main__body--messages-list'>
                 <div class='chat-main__message' data-message-id='${message.id}'>
                   <div class='chat-main__message-name'>
@@ -24,18 +22,18 @@ $(function() {
 }
 
   var interval = function(){
+    var new_id = $('.chat-main__message').eq(-1).data('messageId');//自身の画面のHTML上の一番最新のコメントのidを取得
     $.ajax({
       url: "./messages",
       type: 'GET',
+      data: { new_id: new_id },
       dataType: 'json'
     })
     .done(function(data) {
-      var id = $('.chat-main__message').eq(-1).data('messageId');//自身の画面のHTML上の一番最新のコメントのidを取得
       var insertHTML = '';
       data.messages.forEach(function(message) {
-        if (message.id > id ) {//DBに自身の画面より最新のメッセージが存在していたらそれをまとめて取得する
-          insertHTML += buildHTML(message);
-        }
+        insertHTML += buildHTML(message);
+        $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');//新しいメッセージを取得した時自動的に一番下までスクロールする
       });
       $('.chat-main__body').append(insertHTML);//新しいメッセージを.chat-main__bodyの子要素の末尾に配置
     })
