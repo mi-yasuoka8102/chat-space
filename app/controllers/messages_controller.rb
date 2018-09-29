@@ -5,6 +5,11 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
     @memders = @group.users
+    respond_to do |format|
+      format.html
+      format.json { new_id = params[:new_id].to_i #今の画面上に存在する最新のメッセージのid
+                    @messages_new = @messages.where("id > ?", new_id) } #画面に表示されていない最新のメッセージを取得する
+    end
   end
 
   def create
