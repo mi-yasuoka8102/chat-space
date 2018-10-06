@@ -10,7 +10,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.3.1'
 
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['/Users/owner/.ssh/m-keypair.pem']
+                  keys: ['/Users/owner/.ssh/m3-key_pair.pem']
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
@@ -22,6 +22,6 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 
-  require "capistrano/scm/git" #ワーニング黙らせ用
-  install_plugin Capistrano::SCM::Git #ワーニング黙らせ用
+  # require "capistrano/scm/git" #ワーニング黙らせ用
+  # install_plugin Capistrano::SCM::Git #ワーニング黙らせ用
 end
