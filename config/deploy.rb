@@ -55,4 +55,4 @@ end
 
   # require "capistrano/scm/git" #ワーニング黙らせ用
   # install_plugin Capistrano::SCM::Git #ワーニング黙らせ用
-end
+# end
