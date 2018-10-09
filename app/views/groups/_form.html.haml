@@ -30,12 +30,13 @@
           %p.chat-group-user__name
             = current_user.name
         / 自分以外のユーザー情報
-        - users_except_self.each do |user|
-          #chat-group-user-8.chat-group-user.clearfix.js-chat-member
-            %input{name: "group[user_ids][]", type: "hidden", value: "#{user.id}"}/
-            %p.chat-group-user__name
-            = user.name
-            %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
+        - unless users_except_self.nil? #新規グループ作成時は以下の処理をしない(既存のユーザーは存在しない)
+          - users_except_self.each do |user|
+            #chat-group-user-8.chat-group-user.clearfix.js-chat-member
+              %input{name: "group[user_ids][]", type: "hidden", value: "#{user.id}"}/
+              %p.chat-group-user__name
+              = user.name
+              %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
 
 
   .chat-group-form__field.clearfix
