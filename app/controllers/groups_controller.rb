@@ -19,6 +19,7 @@ class GroupsController < ApplicationController
   end
 
   def edit
+     @users_except_self = @group.users.where.not(id: current_user.id)
   end
 
   def update
